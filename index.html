@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+
+        let num = Math.floor(Math.random() * 101);
+        while(num == 0){
+            let num = Math.floor(Math.random() * 101);
+        }
+
+        let guess = -1;
+        let counter = 0;
+
+
+        while(num != guess){
+            let guess = prompt("guess a number between 1 and 100");
+            if(num > guess){
+                alert("higher");
+            }else if(num < guess){
+                alert("lower");
+            }else if(guess < 0){
+                alert("that number is not between 1 and 100");
+            }else if(guess > 100){
+                alert("that number is not between 1 and 100");
+            }else{
+                break;
+            }
+            counter = 1 + counter
+        }
+
+        alert("Congratulations! You guessed the correct number, which was " + num + " and it took you " + counter + " guesses.");
+
+       
+
+	</script>
+</body>
+</html>
